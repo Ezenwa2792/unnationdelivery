@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UnnationDelivery – Fast Global Shipping</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #0055a5; color: white; padding: 20px; text-align: center; }
+    nav { background: #003e7e; color: white; text-align: center; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    section { padding: 40px 20px; }
+    .container { max-width: 1000px; margin: auto; }
+    .services, .testimonials, .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .box { background: #f0f0f0; padding: 20px; border-radius: 10px; flex: 1 1 300px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    footer { background: #003e7e; color: white; text-align: center; padding: 20px; }
+    input, button { padding: 10px; width: 100%; margin-top: 10px; font-size: 16px; }
+    button { background: #0055a5; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>UnnationDelivery</h1>
+  <p>Connecting Nations. Delivering Promises.</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#track">Track</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="container">
+  <h2>About Us</h2>
+  <p>UnnationDelivery is your trusted global logistics partner, offering reliable, fast, and affordable shipping solutions across Africa, Asia, the USA, and beyond.</p>
+</section>
+
+<section id="services" class="container">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="box">
+      <h3>Local Delivery</h3>
+      <p>Fast and secure delivery within cities and regions across Africa.</p>
+    </div>
+    <div class="box">
+      <h3>International Shipping</h3>
+      <p>We ship packages worldwide – USA, UK, Indonesia, Ghana, and more.</p>
+    </div>
+    <div class="box">
+      <h3>Express Cargo</h3>
+      <p>Time-sensitive deliveries made affordable with guaranteed timelines.</p>
+    </div>
+  </div>
+</section>
+
+<section id="track" class="container">
+  <h2>Track Your Package</h2>
+  <input type="text" id="trackingId" placeholder="Enter Tracking ID">
+  <button onclick="track()">Track Now</button>
+  <div id="trackingResult" style="margin-top: 20px; font-weight: bold;"></div>
+</section>
+
+<script>
+  function track() {
+    const id = document.getElementById("trackingId").value.trim();
+    const result = document.getElementById("trackingResult");
+    const data = {
+      "UN123": "Package is in transit – Lagos, Nigeria.",
+      "UN456": "Delivered to Jakarta, Indonesia.",
+      "UN789": "Arriving New York warehouse tomorrow."
+    };
+    result.innerText = data[id] || "Tracking ID not found. Please check again.";
+  }
+</script>
+
+<section id="testimonials" class="container">
+  <h2>Customer Testimonials</h2>
+  <div class="testimonials">
+    <div class="box">
+      <p>"My goods arrived from the US to Nigeria in just 5 days. Great service!"</p>
+      <strong>— Angela, New York</strong>
+    </div>
+    <div class="box">
+      <p>"Very affordable shipping from Lagos to Accra. Highly recommended."</p>
+      <strong>— Kwame, Ghana</strong>
+    </div>
+    <div class="box">
+      <p>"UnnationDelivery helped me track everything in real time. Awesome!"</p>
+      <strong>— Rahman, Jakarta</strong>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Us</h2>
+  <p>Email: support@unnationdelivery.com</p>
+  <p>Phone: +234 800 123 4567</p>
+  <p>USA Office: 123 Liberty St, New York, NY</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 UnnationDelivery. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
